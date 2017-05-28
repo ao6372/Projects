@@ -10,7 +10,7 @@ In the [jupyter notebook](./case_study.ipynb), following steped are included:
   
     -- Categorical features were converted to numeric ones or replaced by several dummy columns
   
-    -- A new column ['Churn?'] was created as the lable based on the date column, and the 
-    corresponding two date columns were removed to avoid the data leakage
+    -- A new column ['Churn?'] was created as the lable based on the date column, and the corresponding 
+        two date columns were removed to avoid the data leakage
   
     -- f
