@@ -1,1 +1,2 @@
-A case study results of Churn prediction based on a ride-sharing company data are presented here, including a [jupyter notebook](./case_study.ipynb) and a powerpoint.
+# A case study results of Churn prediction based on a ride-sharing company data are presented here, including a [jupyter notebook](./case_study.ipynb) and a powerpoint.
+## In the [jupyter notebook](./case_study.ipynb), firstly I performed exploratory data analysis (EDA), and in the data engineering section, null values were filled and categorical features were converted to numeric ones or replaced by several dummy columns. 
