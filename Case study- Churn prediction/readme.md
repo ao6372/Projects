@@ -1,8 +1,8 @@
 # Summary
-A one-day case study results of Churn prediction based on a ride-sharing company data are presented here, including a [jupyter notebook](./case_study.ipynb) and [slides](./case_study_slides.pdf).
+A one-day case study results of Churn prediction based on a ride-sharing company data are presented here, including a [jupyter notebook](./case_study_final.ipynb) and [slides](./case_study_slides.pdf).
 
 ## Code 
-In the [jupyter notebook](./case_study.ipynb), following steps are included:
+In the [jupyter notebook](./case_study_final.ipynb), following steps are included:
 
     -- Performed exploratory data analysis (EDA)
   
