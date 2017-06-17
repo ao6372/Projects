@@ -1,6 +1,6 @@
 The capstone project is still in progress. 
 
-Here is [the first version of slides](./Capstone Project.pdf).
+Here is [slides](./Capstone Project.pdf).
 
 A classifier using neural network is being built to perform classification on Yelp photos, 
 which are composed on 5 classes: menu, food, drink, inside, and outside.
