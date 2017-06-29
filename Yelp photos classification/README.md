@@ -6,9 +6,9 @@ Here is [the first version of slides](./Capstone_Project_slides.pdf).
 
  
 
-A classifier using neural network is being built to perform classification on Yelp photos, 
-which are composed of 5 categories: menu, food, drink, inside, and outside.
+Built a Yelp photo classification model using convolutional neural network transfer learning based on VGG-16 model.
+There are composed of 5 categories: menu, food, drink, inside, and outside.
 
-Up to now, transfer learning based on Imagenet classifier gives rise to 95.39% accuracy. 
+This model beat Yelp's own classifier in precision by 1.5% (95.5% vs 94%), and in recall by 25.4% (95.4% vs 70%). 
 
 More update is coming soon.
