@@ -2,7 +2,7 @@ The capstone project is still in progress.
 
 Here is [the first version of slides](./Capstone_Project_slides.pdf).
 
-[Presentation vedio][https://youtu.be/WMcGYdezf7E]
+[Presentation vedio](https://youtu.be/WMcGYdezf7E)
 
  
 
