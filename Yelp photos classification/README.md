@@ -31,7 +31,13 @@ This model beat Yelp's own classifier in precision by 1.5% (95.5% vs 94%), and i
 
 # Algorithm
 
-## Introduction to VGG-16 model
+## Introduction to VGG-16 model 
+
+## Transfer learning
+
+## Train fully-connected layers
+
+## Model stacking
 
 
 # Result
