@@ -14,4 +14,6 @@ This model beat Yelp's own classifier in precision by 1.5% (95.5% vs 94%), and i
 
 More update is coming soon.
 
-Confusion matrix (./pictures/Confusion matrix.png)
+Confusion matrix 
+![](./pictures/Confusion matrix.png)
+
