@@ -9,10 +9,15 @@ This is my capstone project of Galvanize. I built a Yelp photo classification mo
 
 # Motivation 
 
+<img width="1092" alt="screen shot 2017-07-06 at 1 37 55 pm" src="https://user-images.githubusercontent.com/25883937/27927249-c4e062fc-6250-11e7-9dc1-157b8a80989b.png">
 
 
 # Dataset
 There are categories: menu, food, drink, inside, and outside.
+
+<img width="422" alt="screen shot 2017-07-06 at 1 38 12 pm" src="https://user-images.githubusercontent.com/25883937/27927285-e2c9f80a-6250-11e7-9553-e8fdd427730e.png"> <img width="537" alt="screen shot 2017-07-06 at 1 38 22 pm" src="https://user-images.githubusercontent.com/25883937/27927287-e2cce290-6250-11e7-85b4-b5c2ae634d52.png">
+<img width="589" alt="screen shot 2017-07-06 at 1 38 35 pm" src="https://user-images.githubusercontent.com/25883937/27927286-e2ca6c5e-6250-11e7-8341-65ee21d11169.png">
+
 
 ## Preprocessing
 
@@ -23,9 +28,18 @@ There are categories: menu, food, drink, inside, and outside.
 
 ## Transfer learning
 
+<img width="1400" alt="screen shot 2017-07-06 at 1 26 45 pm" src="https://user-images.githubusercontent.com/25883937/27926772-2f5523e0-624f-11e7-9e7a-168988a6f0b7.png">
+
+
 ## Train fully-connected layers
 
+![error_curve_big2](https://user-images.githubusercontent.com/25883937/27926567-70b1f40e-624e-11e7-8827-900ee5ad5406.png)
+
+![validation](https://user-images.githubusercontent.com/25883937/27926634-9fa4455a-624e-11e7-9124-2815f17ffeaf.png)
+
 ## Model stacking
+
+<img width="1176" alt="screen shot 2017-07-06 at 1 31 04 pm" src="https://user-images.githubusercontent.com/25883937/27926945-c5166830-624f-11e7-8de0-a0efc09d1226.png">
 
 
 # Result
