@@ -1,6 +1,6 @@
 # Abstract
 
-[the first version of slides](./Capstone_Project.pdf).
+[Slides](./Capstone_Project_Slides.pdf).
 
 [Presentation video in YouTube](https://youtu.be/WMcGYdezf7E)
 
