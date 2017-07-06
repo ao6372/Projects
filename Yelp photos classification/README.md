@@ -15,7 +15,17 @@ This is my capstone project of Galvanize. I built a Yelp photo classification mo
 # Dataset
 There are categories: menu, food, drink, inside, and outside.
 
-<img width="422" alt="screen shot 2017-07-06 at 1 38 12 pm" src="https://user-images.githubusercontent.com/25883937/27927285-e2c9f80a-6250-11e7-9553-e8fdd427730e.png"> <img width="537" alt="screen shot 2017-07-06 at 1 38 22 pm" src="https://user-images.githubusercontent.com/25883937/27927287-e2cce290-6250-11e7-85b4-b5c2ae634d52.png">
+
+<p align="center">
+  <img width="422" alt="screen shot 2017-07-06 at 1 38 12 pm" src="https://user-images.githubusercontent.com/25883937/27927285-e2c9f80a-6250-11e7-9553-e8fdd427730e.png"> 
+</p>
+
+test1
+
+<img width="537" alt="screen shot 2017-07-06 at 1 38 22 pm" src="https://user-images.githubusercontent.com/25883937/27927287-e2cce290-6250-11e7-85b4-b5c2ae634d52.png">
+
+test2
+
 <img width="589" alt="screen shot 2017-07-06 at 1 38 35 pm" src="https://user-images.githubusercontent.com/25883937/27927286-e2ca6c5e-6250-11e7-8341-65ee21d11169.png">
 
 
