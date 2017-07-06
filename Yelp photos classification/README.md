@@ -22,12 +22,15 @@ There are categories: menu, food, drink, inside, and outside.
 
 test1
 
-<img width="537" alt="screen shot 2017-07-06 at 1 38 22 pm" src="https://user-images.githubusercontent.com/25883937/27927287-e2cce290-6250-11e7-85b4-b5c2ae634d52.png">
+<p align="center">
+  <img width="537" alt="screen shot 2017-07-06 at 1 38 22 pm" src="https://user-images.githubusercontent.com/25883937/27927287-e2cce290-6250-11e7-85b4-b5c2ae634d52.png">
+</p>
 
 test2
 
-<img width="589" alt="screen shot 2017-07-06 at 1 38 35 pm" src="https://user-images.githubusercontent.com/25883937/27927286-e2ca6c5e-6250-11e7-8341-65ee21d11169.png">
-
+<p align="center">
+  <img width="589" alt="screen shot 2017-07-06 at 1 38 35 pm" src="https://user-images.githubusercontent.com/25883937/27927286-e2ca6c5e-6250-11e7-8341-65ee21d11169.png">
+</p>
 
 ## Preprocessing
 
@@ -43,9 +46,9 @@ test2
 
 ## Train fully-connected layers
 
-<p align="center">
-  ![error_curve_big2](https://user-images.githubusercontent.com/25883937/27926567-70b1f40e-624e-11e7-8827-900ee5ad5406.png)
-</p>
+
+![error_curve_big2](https://user-images.githubusercontent.com/25883937/27926567-70b1f40e-624e-11e7-8827-900ee5ad5406.png)
+
 
 ![validation](https://user-images.githubusercontent.com/25883937/27926634-9fa4455a-624e-11e7-9124-2815f17ffeaf.png)
 
