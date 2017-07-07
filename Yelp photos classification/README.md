@@ -1,6 +1,6 @@
 # Abstract
 
-[Slides](./Capstone_Project_Slides.pdf).
+[Slides](./Capstone_Project_Slides.pdf)
 
 [Presentation video in YouTube](https://youtu.be/WMcGYdezf7E)
 
@@ -8,6 +8,8 @@ This is my capstone project of Galvanize. I built a Yelp photo classification mo
 
 
 # Motivation 
+
+
 
 <img width="1092" alt="screen shot 2017-07-06 at 1 37 55 pm" src="https://user-images.githubusercontent.com/25883937/27927249-c4e062fc-6250-11e7-9dc1-157b8a80989b.png">
 
