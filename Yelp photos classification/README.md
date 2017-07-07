@@ -43,6 +43,8 @@ test2
 
 ## Transfer learning
 
+[A good video of introduction to transfer learning given by Prof Guestrin from University of Washington](https://youtu.be/HVbUD9aA_Ys)
+
 <img width="1400" alt="screen shot 2017-07-06 at 1 26 45 pm" src="https://user-images.githubusercontent.com/25883937/27926772-2f5523e0-624f-11e7-9e7a-168988a6f0b7.png">
 
 
