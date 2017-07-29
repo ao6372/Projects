@@ -76,7 +76,13 @@ Picture borrowed from this [blog](https://blog.heuritech.com/2016/02/29/a-brief-
 
 ## Transfer learning
 
-[A good video of introduction to transfer learning given by Prof Guestrin from University of Washington](https://youtu.be/HVbUD9aA_Ys)
+Here is [a good introduction video to transfer learning given by Prof Guestrin from University of Washington](https://youtu.be/HVbUD9aA_Ys)
+
+The basic idea is that knowledge extracted from pre-trained model can be used in similar cases. 
+For example, in this case, I borrowed parameters pre-trained in the convolutional layers (as well as some 
+max-pooling layers) and added 2 new full-connected layers, which will be trained with Yelp training dataset to 
+get the new model. The benefit is that firstly, models can be trained very fast, about 3 hours here versus
+3 weeks for the VGG-16 model. Secondly, transfer learning has proved to be powerful in many cases.
 
 <img width="1400" alt="screen shot 2017-07-06 at 1 26 45 pm" src="https://user-images.githubusercontent.com/25883937/27926772-2f5523e0-624f-11e7-9e7a-168988a6f0b7.png">
 
