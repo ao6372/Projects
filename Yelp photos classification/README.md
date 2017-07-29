@@ -222,14 +222,15 @@ The large number in the diagonal of the confusion matrix indicates very good per
 </p>
 
 The final metrics shows that the model here beat Yelp’s classifier in precision by 1.5% (95.5% vs 94%), and in recall by 25.4% (95.4% vs 70%).
+
 <img width="454" alt="screen shot 2017-07-29 at 5 17 33 pm" src="https://user-images.githubusercontent.com/25883937/28748619-db1f6c00-7481-11e7-8f84-53ac68047f4c.png">
 
 
 
 ## Summary
-- Train a photo classifier based on CNN transfer learning algorithm
+- Train a photo classifier based on convolutional neural network transfer learning algorithm
 
-- Improve the precision and recall 
+- Improve the precision and recall compared to Yelp's classifier
 
 - Mislabel could be one reason limiting the further improvement
 
