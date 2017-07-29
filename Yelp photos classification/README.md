@@ -141,10 +141,16 @@ Trainable params: 18,813,693
 Non-trainable params: 0
 ```
 
+## Parameter optimization
 
+### Epoch Number Selection
+Here I select [Stochastic gradient descent (sgd) optimizer](https://keras.io/optimizers/#sgd). One epoch is defined as one forward pass and one backward pass of all the training examples.
+
+Here I plot error curves with the number of epochs at training data and validation data, respectively. As expected, in the training curve, error keeps droping with epoch, while in the validation cruve, error becomes flat starting at epoch = 6, and rebounds at epoch = 9, indicating overfitting. So I finalize epoch = 6.
 ![error_curve_big2](https://user-images.githubusercontent.com/25883937/27926567-70b1f40e-624e-11e7-8827-900ee5ad5406.png)
 
-
+### Batch Size Selection
+Here error curves at vaidation data with differet batch size are compared. It is noticed that, qualitatively, smaller batch size curve converge to lower error level much faster. Since the lowest error achieved at batch size = 5 is similar to that at batch size = 10. I stop decreasing batch size and finalize batch size = 5.
 ![validation](https://user-images.githubusercontent.com/25883937/27926634-9fa4455a-624e-11e7-9124-2815f17ffeaf.png)
 
 ## Model stacking
