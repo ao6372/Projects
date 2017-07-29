@@ -20,26 +20,45 @@ project, I will build my model using convolutional neural network transfer learn
 
 
 # Dataset
-There are categories: menu, food, drink, inside, and outside.
+Dataset was downloaded from [Yelp Dataset Challenge Round 9](https://www.yelp.com/dataset_challenge). There are 80,000 photos with 5-category labels: menu, food, drink, inside, and outside.
 
-
-<p align="center">
-  <img width="422" alt="screen shot 2017-07-06 at 1 38 12 pm" src="https://user-images.githubusercontent.com/25883937/27927285-e2c9f80a-6250-11e7-9553-e8fdd427730e.png"> 
-</p>
-
-test1
+The dataset was splitted to training data (70%), validation data (15%), and test data (15%).
 
 <p align="center">
   <img width="537" alt="screen shot 2017-07-06 at 1 38 22 pm" src="https://user-images.githubusercontent.com/25883937/27927287-e2cce290-6250-11e7-85b4-b5c2ae634d52.png">
 </p>
 
-test2
+
+
+## Preprocessing
+
+Firstly, I reshape each photo to 128x128x3(RGB), and if needed, rotate or vertical/horizontal flip photos to get more 
+training data with different orientations. 
+```
+def preprocess_input(input_file, outfile_name, dimension_width = 128):
+    ##input shape 500 x 49152
+    num_row = input_file.shape[0]
+    train_otsd_test1 = np.reshape(input_file, (num_row, dimension_width, dimension_width, 3))
+    datagen = ImageDataGenerator(vertical_flip=True, 
+                               horizontal_flip=True,
+                               rotation_range=90)
+    datagen.fit(train_otsd_test1)
+    # configure batch size and retrieve one batch of images
+    for X_batch in datagen.flow(train_otsd_test1, batch_size=num_row, shuffle=False):    
+        X_batch2 = np.reshape(X_batch, (num_row, -1))
+        np.save(outfile_name, X_batch2)
+        break
+```
+<p align="center">
+  <img width="422" alt="screen shot 2017-07-06 at 1 38 12 pm" src="https://user-images.githubusercontent.com/25883937/27927285-e2c9f80a-6250-11e7-9553-e8fdd427730e.png"> 
+</p>
+
+# Sources
+I set up a p2.xlarge (GPU instance)[https://aws.amazon.com/blogs/aws/new-p2-instance-type-for-amazon-ec2-up-to-16-gpus/] with the GPU memory of 12 GB at Amazon Web Services (AWS) with 100 times faster computation.
 
 <p align="center">
   <img width="589" alt="screen shot 2017-07-06 at 1 38 35 pm" src="https://user-images.githubusercontent.com/25883937/27927286-e2ca6c5e-6250-11e7-8341-65ee21d11169.png">
 </p>
-
-## Preprocessing
 
 
 # Algorithm
