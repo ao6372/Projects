@@ -72,9 +72,12 @@ test2
 
 # Summary
 – Train a photo classifier based on CNN transfer learning algorithm
+
 – Improve the precision and recall 
+
 – Mislabel could be one reason limiting the further improvement
--- Other base models or model stacking methods may help more
+
+- Other base models or model stacking methods may help more
 
 
 # Reference
