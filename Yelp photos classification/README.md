@@ -216,10 +216,14 @@ The final model can correctly predict the category for each example
 
 ### Confusion matrix 
 
-
+The large number in the diagonal of the confusion matrix indicates very good performance of the model.
 <p align="center">
   <img width="537" alt="screen shot 2017-07-06 at 1 38 22 pm" src="https://user-images.githubusercontent.com/25883937/27881123-24b88052-618d-11e7-98f0-7f569d064e9a.png">
 </p>
+
+The final metrics shows that the model here beat Yelp’s classifier in precision by 1.5% (95.5% vs 94%), and in recall by 25.4% (95.4% vs 70%).
+<img width="454" alt="screen shot 2017-07-29 at 5 17 33 pm" src="https://user-images.githubusercontent.com/25883937/28748619-db1f6c00-7481-11e7-8f84-53ac68047f4c.png">
+
 
 
 ## Summary
