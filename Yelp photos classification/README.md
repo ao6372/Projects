@@ -113,6 +113,32 @@ x = Dense(500, activation='relu', name='fc1')(x)
 
 #There 5 neurons in the last output layer due to 5-category output
 x = Dense(5, activation='softmax', name='predictions')(x)
+
+#Create my own model 
+yelp_vgg16_model = Model(input=vgg16_yelp_input, output=x)
+
+#In the summary, weights and layers from VGG part will be hidden, but they will be fit during the training
+yelp_vgg16_model.summary()
+```
+
+The summary of new model will be:
+```
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+image_input (InputLayer)     (None, 128, 128, 3)       0         
+_________________________________________________________________
+vgg16 (Model)                multiple                  14714688  
+_________________________________________________________________
+flatten (Flatten)            (None, 8192)              0         
+_________________________________________________________________
+fc1 (Dense)                  (None, 500)               4096500   
+_________________________________________________________________
+predictions (Dense)          (None, 5)                 2505      
+=================================================================
+Total params: 18,813,693
+Trainable params: 18,813,693
+Non-trainable params: 0
 ```
 
 
