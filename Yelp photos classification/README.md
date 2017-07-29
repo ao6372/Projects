@@ -44,6 +44,9 @@ test2
 
 ## Introduction to VGG-16 model 
 
+<img width="896" alt="screen shot 2017-07-29 at 10 31 17 am" src="https://user-images.githubusercontent.com/25883937/28745969-2c1d31f2-7449-11e7-96df-b39dd4229a23.png">
+Picture borrowed from this [blog](https://blog.heuritech.com/2016/02/29/a-brief-report-of-the-heuritech-deep-learning-meetup-5)
+
 ## Transfer learning
 
 [A good video of introduction to transfer learning given by Prof Guestrin from University of Washington](https://youtu.be/HVbUD9aA_Ys)
@@ -71,11 +74,11 @@ test2
 ![confusion matrix](https://user-images.githubusercontent.com/25883937/27881123-24b88052-618d-11e7-98f0-7f569d064e9a.png)
 
 # Summary
-– Train a photo classifier based on CNN transfer learning algorithm
+- Train a photo classifier based on CNN transfer learning algorithm
 
-– Improve the precision and recall 
+- Improve the precision and recall 
 
-– Mislabel could be one reason limiting the further improvement
+- Mislabel could be one reason limiting the further improvement
 
 - Other base models or model stacking methods may help more
 
