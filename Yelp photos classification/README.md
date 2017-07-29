@@ -46,7 +46,7 @@ test2
 
 <img width="896" alt="screen shot 2017-07-29 at 10 31 17 am" src="https://user-images.githubusercontent.com/25883937/28745969-2c1d31f2-7449-11e7-96df-b39dd4229a23.png">
 
-Picture borrowed from this [blog](https://youtu.be/HVbUD9aA_Ys)
+Picture borrowed from this [blog](https://blog.heuritech.com/2016/02/29/a-brief-report-of-the-heuritech-deep-learning-meetup-5/).
 
 ## Transfer learning
 
