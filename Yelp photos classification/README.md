@@ -94,7 +94,7 @@ get the new model. The benefit is that firstly, models can be trained very fast,
 
 I employed [Keras API with the TensorFlow backend](https://keras.io/applications/#vgg16).
 
-The code is here:
+The code of new model building is here:
 ```
 #Get back the convolutional part of a VGG network trained on ImageNet
 #"include_top = False" exclude the 3 fully-connected layers at the top of the network.
@@ -156,6 +156,42 @@ Here error curves at vaidation data with differet batch size are compared. It is
 ![validation](https://user-images.githubusercontent.com/25883937/27926634-9fa4455a-624e-11e7-9124-2815f17ffeaf.png)
 
 ### Model stacking
+
+In the following figure, I display validation accuracy of four raw models with different preprocess ways in each category and the whole dataset. Please noticed that the lower limit of y scale is from 0.85, so all models work not bad. I also noticed that every model has its own favorite, for example, model 3 (purple) performs very well in category of inside, but not satisfying enough in category of outside. Moreover, all 4 models give rise to about 94% accuracy in the whole dataset. To give the last push of the performance, I employed a model stacking based on weighted average. Actually, for each photo, every model predicts a probability for each category. I performed a grid search to get a optimal weight combination which can maximize the accuracy in the whole validation dataset.
+
+Here is the code:
+```
+# There are 4 raw model: i, j, k, m
+predict_combine = []
+for i in xrange(0,100):
+    for j in xrange(0,101-i):  
+        for k in xrange(0,101-i-j): 
+            i_ratio = i/100.0
+            j_ratio = j/100.0
+            k_ratio = k/100.0
+            m_ratio = 1 - i_ratio - j_ratio - k_ratio
+            temp = predict_prop_valid_v0 * i_ratio \
+                    + predict_prop_valid_v1 * j_ratio \
+                    + predict_prop_valid_v2 * k_ratio \
+                    + predict_prop_valid_v3 * m_ratio
+            y_pred = np.argmax(temp, axis=1)
+            accuracy_temp = np.sum(y_pred == y_valid)/ 12500.0
+
+            if i == 0 and j == 0 and k == 0:
+                accuracy_max = accuracy_temp
+                i_max = 0
+                j_max = 0
+                k_max = 0
+            else:
+                if accuracy_temp > accuracy_max:
+                    accuracy_max = accuracy_temp
+                    i_max = i
+                    j_max = j
+                    k_max = k
+
+print "i_max = %d, j_max = %d, k_max = %d, accuracy_max = %f" \
+        %(i_max, j_max, k_max, accuracy_max)
+```
 
 <img width="1176" alt="screen shot 2017-07-06 at 1 31 04 pm" src="https://user-images.githubusercontent.com/25883937/27926945-c5166830-624f-11e7-8de0-a0efc09d1226.png">
 
