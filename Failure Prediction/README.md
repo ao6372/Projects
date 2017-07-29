@@ -72,3 +72,21 @@ def normalized_new_feature_create_under_sampling(df, column_list, row_index_all 
 ### - Due to the very small number of failure data, the data are splitted to training data (80% devices) and testing data (20% devices), and optimization of the model parameters is based on cross-validation.
 
 ## Modeling
+Neural Network Model will be used here
+- Parameter optimization is based on 8-fold cross validation
+- As to metrics, due to imbalanced dataset, I will focus on recall, precision, and F1 score, rather than accuracy, which will listed for reference though
+- A predefined parameter -- tolerence day, will be introduced and discussed in the end
+
+## Result and Discussion
+
+### Test data
+- Accuracy:         0.997
+- Precision:        0.141
+- Recall:           0.8
+- F1 score:         0.24
+- Confusion Matrix 
+
+| Tables        | Pred  (1)          | Pred  (0) |
+| ------------- |:-------------:| :-----:|
+| Act  (1)      | 12 | 3 |
+| Act  (1)      | 73      |   22895 |
