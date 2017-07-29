@@ -54,7 +54,9 @@ def preprocess_input(input_file, outfile_name, dimension_width = 128):
 </p>
 
 # Sources
-I set up a p2.xlarge (GPU instance)[https://aws.amazon.com/blogs/aws/new-p2-instance-type-for-amazon-ec2-up-to-16-gpus/] with the GPU memory of 12 GB at Amazon Web Services (AWS) with 100 times faster computation.
+I set up a p2.xlarge 
+[GPU instance](https://aws.amazon.com/blogs/aws/new-p2-instance-type-for-amazon-ec2-up-to-16-gpus/)
+with the GPU memory of 12 GB at Amazon Web Services (AWS) with 100 times faster computation.
 
 <p align="center">
   <img width="589" alt="screen shot 2017-07-06 at 1 38 35 pm" src="https://user-images.githubusercontent.com/25883937/27927286-e2ca6c5e-6250-11e7-8341-65ee21d11169.png">
@@ -64,6 +66,9 @@ I set up a p2.xlarge (GPU instance)[https://aws.amazon.com/blogs/aws/new-p2-inst
 # Algorithm
 
 ## Introduction to VGG-16 model 
+
+[VGG-16 model](https://arxiv.org/pdf/1409.1556.pdf) is a extremely deep network with 16 weight layers, including
+13 convolutional layers and 3 full-connected layers. It was developed by [Visual Geometry Group at University of Oxford](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) for ImageNet Challenge. 
 
 <img width="896" alt="screen shot 2017-07-29 at 10 31 17 am" src="https://user-images.githubusercontent.com/25883937/28745969-2c1d31f2-7449-11e7-96df-b39dd4229a23.png">
 
