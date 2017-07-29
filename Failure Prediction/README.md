@@ -90,3 +90,64 @@ Neural Network Model will be used here
 | ------------- |:-------------:| :-----:|
 | Act  (1)      | 12 | 3 |
 | Act  (1)      | 73      |   22895 |
+
+### Introduction to tolerence day
+- Based on above plots of feature performance, features of date very close to the failure day perform very similar to those of the failure day. In real cases, failure alarm several days earlier (the parameter 'tolerance_date' in the following function) than the true fail is necessary.
+- Next I will show how metrics change if treating the predicted failure (1) within "tolerance_date" before the true failure date as correct prediction
+```
+def adjusted_y_pred_fn(df_test, model, tolerance_date):
+    ### Given testing dataframe, trained model, and tolerance_date, return true y_test, and
+    ### y_test_pred_adjusted, which is equal to 1 ONLY if y_test_pred = 1 AND its date 
+    ## is within "tolerance_date" days before true failure date for each failed device
+    df_test_cp = df_test.copy()
+    df_test_cp = df_test_cp.sort_values(['device', 'date'])
+    df_test_cp = df_test_cp.reset_index(drop=True)
+    df_test_cp2 = df_test_cp.copy()
+    y_test = df_test_cp['failure'].ravel()
+    y_test_cp = y_test.copy()
+    
+    del df_test_cp2['failure']
+    del df_test_cp2['date']
+    del df_test_cp2['device']
+    x_test = df_test_cp2.values
+    y_test_pred = model.predict(x_test)
+    
+    ## Revalue "failure"
+    df_test_cp['failure'] = y_test_pred    
+
+    failed_device_list = list(df_test_cp.loc[df_test_cp['failure'] == 1, 'device'])
+    for index_device, device in enumerate(failed_device_list):
+        df_temp = df_test_cp[df_test_cp['device'] == device]
+        raw_index = df_temp.index
+        for i in range(2, min(tolerance_date+2, len(df_temp)+1)):
+            last_day = pd.Timestamp(df_temp.iloc[-1]['date'])
+            current_day = pd.Timestamp(df_temp.iloc[-i]['date'])
+            day_diff = (last_day - current_day).days
+            if day_diff <= tolerance_date:
+                df_test_cp.loc[raw_index[len(df_temp) - i], 'failure'] = 0
+    ## Up to here, in df_test_cp, "failure" are relabelled to "0" within "tolerance_date" days 
+    ## before the failure day    
+
+    y_test_pred_adjusted = df_test_cp['failure']
+    
+    return x_test, y_test_cp, y_test_pred, y_test_pred_adjusted
+```
+
+### Test data wit 10 tolerance days
+- Accuracy:         0.998
+- Precision:        0.255
+- Recall:           0.8
+- F1 score:         0.387
+- Confusion Matrix 
+
+| Tables        | Pred  (1)          | Pred  (0) |
+| ------------- |:-------------:| :-----:|
+| Act  (1)      | 12      | 3 |
+| Act  (1)      | 35      |   22933 |
+
+It is noticed that with 10 days alarm, the false positive drops by 52% from 73 to 35, and corresponding metrics, i.e. precision and F1 score, improve significantly
+
+## Outlook
+Two more modeling solutions
+- Regression model to predict the remaining useful life
+- Multi-class classification where the failure day is relabelled as "2", several days exactly before the failure day are relabelled as "1", other healthy days are kept as "0"
