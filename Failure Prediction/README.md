@@ -1,5 +1,7 @@
 # Maintenance cost reduction through a failure-prediction Neural Network Model
 
+[Jupyter Notebook](./Failure_Prediction_Project_Final_Version.ipynb)
+
 ## Background
 A 3D Technologies company has a series of sensors which deliver daily monitor data. Predictive models are necessary to help predict the working conditions of devices to indicate when to perform maintenance. This techniques will save cost by avoiding failure of devices or not replacing healthy devices far early from true failure. 
 
