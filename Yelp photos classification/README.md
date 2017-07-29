@@ -12,8 +12,10 @@ This is my capstone project of Galvanize. I built a Yelp photo classification mo
 
 # Motivation 
 
-
-
+Yelp released a new feature labeling photos updated by customers. When searching for a new restaurant, customers can easily
+find information they need, e.g. menu, inside environment. Higher flow of customers are expected with this new feature.
+However, [Yelp’s own classifier](https://engineeringblog.yelp.com/2015/10/how-we-use-deep-learning-to-classify-business-photos-at-yelp.html) was reported with overall precision of 94% and recall of 70%, which is still not good enought. In this 
+project, I will build my model using convolutional neural network transfer learning to improve the performance of classifiers.
 <img width="1092" alt="screen shot 2017-07-06 at 1 37 55 pm" src="https://user-images.githubusercontent.com/25883937/27927249-c4e062fc-6250-11e7-9dc1-157b8a80989b.png">
 
 
