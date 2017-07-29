@@ -2,7 +2,10 @@
 
 [Slides](./Capstone_Project_Slides.pdf)
 
-[Presentation video in YouTube](https://youtu.be/WMcGYdezf7E)
+<a href="https://youtu.be/WMcGYdezf7E
+" target="_blank"><img src="http://img.youtube.com/vi/WMcGYdezf7E/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 
 This is my capstone project of Galvanize. I built a Yelp photo classification model using convolutional neural network transfer learning based on [VGG-16 model](https://arxiv.org/pdf/1409.1556.pdf). This model beat [Yelp’s own classifier](https://engineeringblog.yelp.com/2015/10/how-we-use-deep-learning-to-classify-business-photos-at-yelp.html) in precision by 1.5% (95.5% vs 94%), and in recall by 25.4% (95.4% vs 70%). A weighted-average model stacking was employed to push the final 1.5% improvement in precision. The model was built using the Keras API with the TensorFlow backend, and was trained at GPU instances at Amazon Web Services (AWS).
 
