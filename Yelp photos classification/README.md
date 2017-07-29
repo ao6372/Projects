@@ -68,7 +68,7 @@ with the GPU memory of 12 GB at Amazon Web Services (AWS) with 100 times faster 
 ## Introduction to VGG-16 model 
 
 [VGG-16 model](https://arxiv.org/pdf/1409.1556.pdf) is a extremely deep network with 16 weight layers, including
-13 convolutional layers and 3 full-connected layers. It was developed by [Visual Geometry Group at University of Oxford](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) for ImageNet Challenge. 
+13 convolutional layers and 3 full-connected layers. It was developed by [Visual Geometry Group at University of Oxford](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) for ImageNet Challenge. It performs very well with the 1000-category dataset.
 
 <img width="896" alt="screen shot 2017-07-29 at 10 31 17 am" src="https://user-images.githubusercontent.com/25883937/28745969-2c1d31f2-7449-11e7-96df-b39dd4229a23.png">
 
