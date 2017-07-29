@@ -79,8 +79,9 @@ Picture borrowed from this [blog](https://blog.heuritech.com/2016/02/29/a-brief-
 Here is [a good introduction video to transfer learning given by Prof Guestrin from University of Washington](https://youtu.be/HVbUD9aA_Ys)
 
 The basic idea is that knowledge extracted from pre-trained model can be used in similar cases. 
-For example, in this case, I borrowed parameters pre-trained in the convolutional layers (as well as some 
-max-pooling layers) and added 2 new full-connected layers, which will be trained with Yelp training dataset to 
+For example, in this case, I borrowed parameters from the convolutional layers (as well as some 
+max-pooling layers) of pre-trained VGG-16 model, and added 2 new full-connected layers, which 
+will be trained with Yelp training dataset to 
 get the new model. The benefit is that firstly, models can be trained very fast, about 3 hours here versus
 3 weeks for the VGG-16 model. Secondly, transfer learning has proved to be powerful in many cases.
 
@@ -88,6 +89,31 @@ get the new model. The benefit is that firstly, models can be trained very fast,
 
 
 ## Train fully-connected layers
+
+I employed [Keras API with the TensorFlow backend](https://keras.io/applications/#vgg16).
+
+The code is here:
+```
+#Get back the convolutional part of a VGG network trained on ImageNet
+#"include_top = False" exclude the 3 fully-connected layers at the top of the network.
+model_vgg16_conv = VGG16(weights='imagenet', include_top=False)
+
+#Print out the model summary
+model_vgg16_conv.summary()
+
+#Create my own input format (here 128x128x3)
+vgg16_yelp_input = Input(shape=(128, 128, 3),name = 'image_input')
+
+#Use the generated model 
+output_vgg16_conv = model_vgg16_conv(vgg16_yelp_input)
+
+#Add two fully-connected layers 
+x = Flatten(name='flatten')(output_vgg16_conv)
+x = Dense(500, activation='relu', name='fc1')(x)
+
+#There 5 neurons in the last output layer due to 5-category output
+x = Dense(5, activation='softmax', name='predictions')(x)
+```
 
 
 ![error_curve_big2](https://user-images.githubusercontent.com/25883937/27926567-70b1f40e-624e-11e7-8827-900ee5ad5406.png)
