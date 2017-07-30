@@ -1,4 +1,4 @@
-# Yelp photo classification via Convolutional Neural Networks Transfer Learning
+# Building a classifier beating Yelp's own photo classifier
 
 ## Abstract
 
